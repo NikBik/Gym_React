@@ -19,10 +19,14 @@ const HeaderComponent = () => {
 
   return (
     <header className="header">
-      <div className="logoDiv">
-        <img src={LOGO_URL} alt="Logo" className="logoImg" />
-      </div>
-      <div className="appName">DumbBells Paradise</div>
+      <Link to="">
+        <div className="logoDiv">
+          <img src={LOGO_URL} alt="Logo" className="logoImg" />
+        </div>
+      </Link>
+      <Link to="">
+        <div className="appName">DumbBells Paradise</div>
+      </Link>
       <nav className="navItems">
         <ul className="navList">
           <Link to="mySubscriptions">
