@@ -3,12 +3,14 @@ import "../styles/tailwind.css";
 import { getPrograms, subscribeToProgram } from "../services/apis";
 import ProgramCard from "./ProgramCard";
 import UserContext from "./UserContext.js";
+import { useWorkout } from "./SubscriptionContext.js";
 
 const MembershipForm = () => {
   const [programId, setProgramId] = useState("");
   const [programs, setPrograms] = useState([]);
   const { user } = useContext(UserContext);
   const [succesfulSubscription, setSuccesfulSubscription] = useState();
+  const { workouts, setWorkouts } = useWorkout();
   const [failedSubscription, setFailedSubscription] = useState();
 
   const handleSubmit = async (event) => {
@@ -21,6 +23,7 @@ const MembershipForm = () => {
       });
       console.log(response);
       const program = programs.find((p) => p.programId === Number(programId));
+      setWorkouts((prevWorkouts) => [...prevWorkouts, program]);
       setSuccesfulSubscription(
         "Subscribed sucessfully to: " + program.programNames
       );

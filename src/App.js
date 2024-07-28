@@ -1,15 +1,19 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
 import Home from "./pages/Home";
 import "./styles/tailwind.css";
 import Dashboard from "./components/Dasboard";
-import path from "path-browserify";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import BodyComponent from "./components/BodyComponent";
 import ErrorClassComponent from "./components/ErrorClassComponent";
 import UserContext, { UserProvider } from "./components/UserContext";
+import { UserWorkoutProvider } from "./components/WorkoutContext";
+import { WorkoutProvider } from "./components/SubscriptionContext";
+import AboutUs from "./components/AboutUs";
+import ContactUs from "./components/ContactUs";
+import TermsOfUse from "./components/TermsOfUse";
+import SubscriptionList from "./components/SubscriptionList";
+import WorkoutList from "./components/WorkoutList";
 
-// Define your routes
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -17,12 +21,32 @@ const appRouter = createBrowserRouter([
     errorElement: <ErrorClassComponent />,
     children: [
       {
-        path: "dashboard", // Use relative path
+        path: "dashboard",
         element: <Dashboard />,
         children: [
           {
-            path: "", // Default route for /dashboard
+            path: "",
             element: <BodyComponent />,
+          },
+          {
+            path: "aboutUs",
+            element: <AboutUs />,
+          },
+          {
+            path: "contactUs",
+            element: <ContactUs />,
+          },
+          {
+            path: "termsOfUse",
+            element: <TermsOfUse />,
+          },
+          {
+            path: "mySubscriptions",
+            element: <SubscriptionList />,
+          },
+          {
+            path: "myWorkouts",
+            element: <WorkoutList />,
           },
         ],
       },
@@ -32,9 +56,13 @@ const appRouter = createBrowserRouter([
 
 const App = () => {
   return (
-    <UserProvider>
-      <RouterProvider router={appRouter} />
-    </UserProvider>
+    <UserWorkoutProvider>
+      <WorkoutProvider>
+        <UserProvider>
+          <RouterProvider router={appRouter} />
+        </UserProvider>
+      </WorkoutProvider>
+    </UserWorkoutProvider>
   );
 };
 

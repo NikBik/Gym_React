@@ -235,6 +235,18 @@
     overflow: hidden; /* Ensures content doesn't overflow rounded corners */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
 }
+.no-active-plans-message {
+    font-size: 1.25rem;
+    color: #f87171; /* Red color for message */
+    text-align: center;
+    padding: 1rem 2rem;
+    border: 1px solid #f87171;
+    border-radius: 0.375rem;
+    background-color: #fee2e2; /* Light red background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 1rem 0; /* Margin for spacing */
+  }
+  
 
 .workout-form-container:hover {
     transform: scale(1.02); /* Slightly enlarge the container on hover */
@@ -333,6 +345,39 @@
 
 .workout-form-image:hover {
     opacity: 0.8; /* Slightly fade the image on hover */
+}
+
+/* Dropdown container */
+.workout-form select {
+    display: block; /* Block-level dropdown */
+    width: 100%; /* Full width */
+    border: 1px solid #d1d5db; /* Light gray border to match inputs */
+    border-radius: 0.375rem; /* Slightly rounded corners */
+    padding: 0.5rem 1rem; /* Padding inside the dropdown */
+    box-sizing: border-box; /* Include padding and border in width */
+    font-size: 1rem; /* Font size for the dropdown */
+    font-weight: 400; /* Normal font weight */
+    background-color: #fff; /* White background */
+    color: #374151; /* Dark gray text color */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus state */
+}
+
+/* Dropdown focus state */
+.workout-form select:focus {
+    outline: none; /* Remove default outline */
+    border-color: #3b82f6; /* Blue border color on focus */
+    box-shadow: 0 0 0 2px #3b82f6; /* Blue ring around focused dropdown */
+}
+
+/* Dropdown option styles */
+.workout-form option {
+    padding: 0.5rem; /* Padding inside options */
+}
+
+/* Additional styling for disabled option */
+.workout-form option:disabled {
+    color: #9ca3af; /* Light gray text color for disabled option */
+    background-color: #f3f4f6; /* Light background color for disabled option */
 }
 
 /************************************************************************/
@@ -856,3 +901,205 @@ button {
 .program-period {
     margin-bottom: 0.5rem; /* Space below each detail */
 }
+/********************************************************************/
+/**About Us**/
+.about-us-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  .intro-section, .history-section, .team-section, .facilities-section, .community-section, .testimonials-section, .cta-section {
+    margin-bottom: 2rem;
+  }
+  
+  .team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .team-member img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-right: 1rem;
+  }
+  
+  blockquote {
+    border-left: 4px solid #007BFF;
+    padding-left: 1rem;
+    margin: 1rem 0;
+  }
+  
+  button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  /********************************************************************/
+  /*contact us*/
+  .contact-us-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .contact-details-section, .social-media-section, .map-section {
+    margin-bottom: 2rem;
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  .contact-details-section p, .social-media-section a {
+    margin: 0.5rem 0;
+  }
+  
+  .contact-details-section p {
+    font-size: 1.2rem;
+  }
+  
+  .social-media-section a {
+    display: inline-block;
+    margin-right: 1rem;
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .social-media-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .map-section iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+  }
+/********************************************************************/
+/*Terms of use*/  
+.terms-of-use-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h1, h2 {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /***************************************************************/
+  /*Subscription page css*/
+  /* General styling for the subscription card */
+.subscription-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+  }
+  
+  .program-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .program-description {
+    color: #4a5568;
+  }
+  
+  .program-details {
+    margin-top: 16px;
+  }
+  
+  .program-charges, .program-period, .program-dates, .program-status {
+    margin-top: 8px;
+    font-size: 0.875rem;
+    color: #2d3748;
+  }
+  
+  .program-status.text-green-500 {
+    color: #38a169;
+  }
+  
+  .program-status.text-red-500 {
+    color: #e53e3e;
+  }
+  
+  /***********************************************************************/
+  /*Workout card css*/
+
+  /* WorkoutCard.css */
+
+.workout-card {
+    border: 1px solid #e2e8f0; /* Light gray border for the card */
+    padding: 16px; /* Add padding inside the card */
+    border-radius: 8px; /* Rounded corners for the card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #ffffff; /* White background for the card */
+    margin-bottom: 16px; /* Space below each card */
+  }
+  
+  .workout-title {
+    color: #333333; /* Dark gray color for the title */
+  }
+  
+  .workout-details {
+    color: #4a5568; /* Medium gray for details text */
+  }
+  
+  .workout-date {
+    color: #2d3748; /* Slightly darker gray for date */
+  }
+  
+  .workout-program-id {
+    color: #718096; /* Light gray for program ID */
+  }
+  
+  /* Optional: Responsive design */
+  @media (max-width: 768px) {
+    .workout-card {
+      padding: 12px; /* Reduce padding on smaller screens */
+    }
+  }
+  

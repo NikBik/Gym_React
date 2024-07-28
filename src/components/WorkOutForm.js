@@ -1,48 +1,60 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../styles/tailwind.css";
+import UserContext from "./UserContext.js";
+import {
+  addAWorkOut,
+  getWorkout,
+  getWorkoutDetails,
+} from "../services/apis.js";
+import WorkoutContext from "./SubscriptionContext.js";
+import UserWorkoutsContext from "./WorkoutContext.js";
+import WorkoutCard from "./WorkOutCard.js";
 
 const WorkoutForm = () => {
-  const [userId, setUserId] = useState("");
-  const [programId, setProgramId] = useState("");
-  const [details, setDetails] = useState("");
+  const { user } = useContext(UserContext);
+  const { workouts, setWorkouts } = useContext(WorkoutContext);
+  const { setUserWorkouts } = useContext(UserWorkoutsContext);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const response = await fetch("/api/workouts", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ userId, programId, details }),
-    });
-    const data = await response.json();
-    console.log(data);
-  };
+  useEffect(() => {
+    const fetchSubscribedWorkouts = async () => {
+      try {
+        const data = await getWorkout(user.id);
+        console.log("workouts : ", data);
+        setWorkouts(data);
+      } catch (error) {
+        console.error("Error fetching workouts:", error);
+      }
+    };
+    fetchSubscribedWorkouts();
+  }, [user.id]);
+
+  useEffect(() => {
+    const fetchUserWorkouts = async () => {
+      try {
+        const data = await getWorkoutDetails(user.id);
+        console.log("user_workouts : ", data);
+        setUserWorkouts(data);
+      } catch (error) {
+        console.error("Error fetching workouts:", error);
+      }
+    };
+    fetchUserWorkouts();
+  }, [user.id]);
 
   return (
     <div className="workout-form-container">
       <div className="workout-form">
-        <h2 className="text">
-          Thrilling Workout!!! Let's mark daily progress...💪{" "}
-        </h2>
-        <label>
-          Program ID:
-          <input
-            type="number"
-            value={programId}
-            onChange={(e) => setProgramId(e.target.value)}
-            required
-          />
-        </label>
-        <label>
-          Details:
-          <textarea
-            value={details}
-            onChange={(e) => setDetails(e.target.value)}
-            required
-          ></textarea>
-        </label>
-        <button type="submit">Log Workout</button>
+        {workouts != "undefined" && workouts.length > 0 ? (
+          <WorkoutCard workouts={workouts} />
+        ) : (
+          <div className="no-active-plans-message">
+            <h1>
+              Hey {user.firstName}, Subscribe from above list of memberships and
+              start tracking your progress.
+            </h1>
+            <h1>Please refer to list of memberships above.</h1>
+          </div>
+        )}
       </div>
       <div className="workout-form-image"></div>
     </div>

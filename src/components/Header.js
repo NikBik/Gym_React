@@ -2,6 +2,7 @@ import LOGO_URL from "../utils/constants.js";
 import "../styles/tailwind.css";
 import { useContext } from "react";
 import UserContext from "./UserContext.js";
+import { Link } from "react-router-dom";
 
 const HeaderComponent = () => {
   const { user, setUser } = useContext(UserContext);
@@ -24,13 +25,18 @@ const HeaderComponent = () => {
       <div className="appName">DumbBells Paradise</div>
       <nav className="navItems">
         <ul className="navList">
-          <li>Profile</li>
-          <li>Wallet</li>
-          <li>Cart</li>
-          <li>Home</li>
+          <Link to="mySubscriptions">
+            <li>My Subscriptions</li>
+          </Link>
+          <Link to="myWorkouts">
+            <li>My Workouts</li>
+          </Link>
+          <Link to="">
+            <li>Home</li>
+          </Link>
         </ul>
         <button className="loginButton" onClick={logout}>
-          LoggedIn
+          Sign Out
         </button>
         <span className="userGreeting">Hello {user.firstName} !!</span>
       </nav>

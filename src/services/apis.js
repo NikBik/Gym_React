@@ -37,9 +37,26 @@ export const getPrograms = async () => {
   return response.data;
 };
 
+export const getWorkout = async (id) => {
+  const response = await myAxios.get(`/workouts/getWorkout?id=${id}`);
+  return response.data;
+};
+
+export const getWorkoutDetails = async (id) => {
+  const response = await myAxios.get(`/workouts/getWorkoutDetails?id=${id}`);
+  return response.data;
+};
+
 export const subscribeToProgram = async (data) => {
   const response = await myAxios.post(
     `/memberships/subscribe?userId=${data.userId}&planId=${data.planId}`
+  );
+  return response.data;
+};
+
+export const addAWorkOut = async (data) => {
+  const response = await myAxios.post(
+    `/workouts/addWorkout?userId=${data.userId}&programId=${data.programId}&details=${data.details}`
   );
   return response.data;
 };
