@@ -1,0 +1,858 @@
+/* HeaderComponent.css */
+.header {
+    @apply flex justify-between items-center p-4 bg-gray-800 text-white shadow-md max-w-screen-xl mx-auto h-20;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.header:hover {
+    background-color: #2d3748; /* Slightly lighter gray on hover */
+}
+
+.logoImg {
+    @apply h-16; /* Increased height */
+    transition: transform 0.3s ease, height 0.3s ease; /* Smooth transform and height transition */
+}
+
+.logoImg:hover {
+    transform: scale(1.1); /* Slightly increase the size of the logo on hover */
+    height: 4rem; /* Increased height on hover */
+}
+.navItems {
+    @apply flex items-center; /* Ensure that the nav items container uses flexbox */
+}
+
+.navList {
+    @apply flex list-none space-x-6; /* Ensure that the list items are displayed horizontally */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.navList li {
+    @apply hover:text-orange-400 cursor-pointer text-lg;
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transform and color transition */
+}
+
+.navList li:hover {
+    transform: translateY(-5px); /* Move the list item up slightly on hover */
+}
+
+.loginButton {
+    @apply bg-orange-500 text-white py-2 px-6 rounded hover:bg-orange-600 transition duration-200 text-lg;
+    transition: transform 0.3s ease; /* Smooth transform transition */
+    padding-left: 1rem; /* Left padding */
+    padding-right: 1rem; /* Right padding */
+    margin-left: 0.5rem; /* Left margin */
+    margin-right: 0.5rem; /* Right margin */
+}
+
+.loginButton:hover {
+    transform: scale(1.05); /* Slightly increase the size of the button on hover */
+}
+/* Increase the size of the header title */
+.header .appName {
+    font-size: 2rem; /* Adjust as needed for larger title */
+    font-weight: 700; /* Ensure the title is bold */
+    @apply text-white; /* Apply text color */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transform and color transition */
+}
+
+.header .appName:hover {
+    transform: scale(1.1); /* Slightly increase the size of the title on hover */
+    color: #f59e0b; /* Optional: Change color on hover */
+}
+
+/********************************************************************************/
+.membership-form-container {
+    display: flex; /* Use Flexbox for layout */
+    max-width: 1280px; /* Adjust width as needed */
+    margin: 0 auto; /* Center horizontally */
+    border-radius: 0.75rem; /* Rounded corners */
+    overflow: hidden; /* Ensures content doesn't overflow rounded corners */
+    height: auto; /* Allow height to adjust based on content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth container transition */
+    background-color: #f9f9f9; /* Light background color for the container */
+}
+
+.membership-form-container:hover {
+    transform: scale(1.02); /* Slightly enlarge the container on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Styling for the image side */
+.membership-form-image {
+    flex: 1; /* Takes up half of the container */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCi7eaWXR-_OoJrPbEnu_ASHL00lzbsvKIOQ&s'); /* Background image */
+    background-size: cover; /* Ensure the image covers the container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    position: relative; /* Position relative for image positioning */
+    display: flex; /* Flexbox for centering the image */
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.membership-form-image:hover {
+    background-color: rgba(0, 0, 0, 0.3); /* Darken background on hover */
+}
+
+/* Styling for the form side */
+.membership-form-content {
+    flex: 1; /* Takes up the other half of the container */
+    padding: 2rem; /* Adjust padding as needed */
+    background-color: #ffffff; /* White background for content */
+    color: #003d6c; /* Dark blue text color */
+    position: relative; /* Ensure content is positioned correctly */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for the form */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for the form */
+}
+
+.membership-form-content:hover {
+    transform: translateY(-5px); /* Slightly lift the content on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.membership-form-content h2 {
+    font-size: 1.5rem; /* Font size for headings */
+    font-weight: 600; /* Bold font weight */
+    margin-bottom: 1.5rem; /* Space below the heading */
+    line-height: 1.4; /* Increase line height for better readability */
+    color: #333; /* Darker color for better contrast */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.membership-form-content h2:hover {
+    color: #2563eb; /* Change color on hover */
+}
+
+/* Styling for the form labels */
+.membership-form-content label {
+    display: block; /* Block-level labels */
+    color: #003d6c; /* Dark blue text color */
+    font-weight: 500; /* Medium font weight */
+    margin-bottom: 0.75rem; /* Space below labels */
+    font-size: 1rem; /* Font size for labels */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.membership-form-content label:hover {
+    color: #2563eb; /* Change color on hover */
+}
+
+/* Styling for the dropdown */
+.membership-form-content select {
+    display: block; /* Block-level dropdown */
+    width: 100%; /* Full width */
+    border: 1px solid #d1d5db; /* Light gray border */
+    border-radius: 0.375rem; /* Slightly rounded corners */
+    padding: 0.75rem 1rem; /* Padding inside dropdown */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    background-color: #ffffff; /* White background for the dropdown */
+    font-size: 1rem; /* Font size for dropdown options */
+    color: #333; /* Dark text color for better readability */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.membership-form-content select:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 2px #3b82f6; /* Blue ring around focused dropdown */
+    border-color: #3b82f6; /* Change border color on focus */
+}
+
+/* Styling for the submit button */
+.membership-form-content button {
+    width: 100%; /* Full width button */
+    background-color: #2563eb; /* Blue background */
+    color: #ffffff; /* White text color */
+    padding: 0.75rem; /* Larger padding for better clickability */
+    border-radius: 0.375rem; /* Slightly rounded corners */
+    font-weight: 600; /* Bold font weight */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth background color and transform transition */
+}
+
+.membership-form-content button:hover {
+    background-color: #1d4ed8; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.membership-form-content .userGreeting {
+    display: none; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
+}
+
+@media (min-width: 768px) {
+    .membership-form-content .userGreeting {
+        display: inline; /* Show on medium screens and up */
+        font-size: 1rem; /* Font size for user greeting */
+        opacity: 1; /* Ensure opacity is visible */
+    }
+}
+
+/* General message styles */
+.message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Success message */
+  .success-message {
+    background-color: #d4edda; /* Light green background */
+    color: #155724; /* Dark green text */
+    border: 1px solid #c3e6cb; /* Light green border */
+  }
+  
+  /* Error message */
+  .error-message {
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24; /* Dark red text */
+    border: 1px solid #f5c6cb; /* Light red border */
+  }
+  
+  /* Optional: Animation for message fading */
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  .fade-out {
+    animation: fadeOut 1s ease-out;
+  }
+  
+/**************************************************************************/
+/* WorkoutForm.css */
+.workout-form-container {
+    display: flex; /* Use Flexbox for layout */
+    max-width: 1280px; /* Adjust width as needed */
+    margin: 0 auto; /* Center horizontally */
+    height: 500px; /* Set a specific height for the container */
+    border-radius: 0.75rem; /* Rounded corners */
+    overflow: hidden; /* Ensures content doesn't overflow rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.workout-form-container:hover {
+    transform: scale(1.02); /* Slightly enlarge the container on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+/* Styling for the form side */
+.workout-form {
+    flex: 1; /* Takes up half of the container */
+    padding: 1.5rem; /* Padding inside the form */
+    background-color: #fff3e6; /* Light orange background */
+    border-radius: 0.75rem; /* Rounded corners */
+    border: 1px solid #ffd9b3; /* Light orange border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.workout-form:hover {
+    transform: translateY(-5px); /* Lift the form slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+/* Heading styles */
+.workout-form h2 {
+    font-size: 1.5rem; /* Font size for headings */
+    font-weight: 600; /* Bold font weight */
+    margin-bottom: 1.5rem; /* Space below the heading */
+    color: #1f2937; /* Dark text color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.workout-form h2:hover {
+    color: #2563eb; /* Change color on hover */
+}
+
+/* Label styles */
+.workout-form label {
+    display: block; /* Block-level labels */
+    color: #374151; /* Dark gray text color */
+    font-weight: 500; /* Medium font weight */
+    margin-bottom: 0.5rem; /* Space below labels */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.workout-form label:hover {
+    color: #2563eb; /* Change color on hover */
+}
+
+/* Input and textarea styles */
+.workout-form input,
+.workout-form textarea {
+    display: block; /* Block-level inputs and textareas */
+    width: 100%; /* Full width */
+    border: 1px solid #d1d5db; /* Light gray border */
+    border-radius: 0.375rem; /* Slightly rounded corners */
+    padding: 0.5rem 1rem; /* Padding inside inputs */
+    box-sizing: border-box; /* Include padding and border in width */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus state */
+}
+
+.workout-form input:focus,
+.workout-form textarea:focus {
+    outline: none; /* Remove default outline */
+    border-color: #3b82f6; /* Change border color on focus */
+    box-shadow: 0 0 0 2px #3b82f6; /* Blue ring around focused element */
+}
+
+/* Button styles */
+.workout-form button {
+    width: 100%; /* Full width */
+    background-color: #2563eb; /* Blue background */
+    color: #ffffff; /* White text color */
+    padding: 0.75rem; /* Padding inside button */
+    border-radius: 0.375rem; /* Slightly rounded corners */
+    font-weight: 600; /* Bold font weight */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for background color and transform */
+}
+
+.workout-form button:hover {
+    background-color: #1d4ed8; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Styling for the image side */
+.workout-form-image {
+    flex: 1; /* Takes up the other half of the container */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv9npoL27FUgRoJD0usXZ5v9a0PT39e-ivdA&s'); /* Background image */
+    background-size: cover; /* Ensure the image covers the container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
+}
+
+.workout-form-image:hover {
+    opacity: 0.8; /* Slightly fade the image on hover */
+}
+
+/************************************************************************/
+/* ClassList.css */
+.class-list-container {
+    display: flex; /* Use Flexbox for layout */
+    max-width: 80rem; /* Adjust width as needed */
+    margin: 0 auto; /* Center horizontally */
+    border-radius: 0.5rem; /* Slightly rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+    overflow: hidden; /* Ensures content doesn't overflow rounded corners */
+    height: 400px; /* Fixed height for the container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+.class-list-container:hover {
+    transform: scale(1.02); /* Slightly enlarge the container on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+/* Styling for the image side */
+.class-list-image {
+    flex: 1; /* Takes up half of the container */
+    position: relative; /* Ensure relative positioning for image */
+    background-color: #f3f4f6; /* Light gray background color */
+    overflow: hidden; /* Ensures content doesn't overflow rounded corners */
+}
+
+/* Ensure the background image is centered and fits well */
+.class-list-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJu6AUjWmSgYQ12WYVfMZ02-UPALdQrbOy0Q&s'); /* Background image */
+    background-size: cover; /* Ensure the image covers the container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    border-radius: 0.5rem; /* Slightly rounded corners for the image */
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
+}
+
+/* Optional hover effect */
+.class-list-image:hover::before {
+    opacity: 0.8; /* Slightly fade the image on hover */
+}
+
+/* Styling for the content side */
+.class-list-content {
+    flex: 1; /* Takes up the other half of the container */
+    padding: 1rem; /* Adjust padding as needed */
+    background-color: #ffffff; /* White background for content */
+    color: #0d0d0d; /* Dark blue-black text color */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Distribute space between elements */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.class-list-content:hover {
+    background-color: #f9f9f9; /* Slightly lighter background color on hover */
+}
+
+/* Heading styles */
+.class-list-content h2 {
+    font-size: 1.75rem; /* Larger font size for the title */
+    font-weight: 600; /* Font weight for the title */
+    margin-bottom: 1rem; /* Margin below the title */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.class-list-content h2:hover {
+    color: #2563eb; /* Change color on hover */
+}
+
+/* List styles */
+.class-list-content ul {
+    list-style-type: none; /* Removes default list styling */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    flex-grow: 1; /* Allow the list to grow and fill the available space */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.class-list-content li {
+    border-bottom: 1px solid #e5e7eb; /* Light border for list items */
+    padding: 0.5rem 0; /* Reduced padding for list items */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.class-list-content li:hover {
+    background-color: #f3f4f6; /* Light gray background on hover */
+    transform: translateX(5px); /* Slightly move the item to the right on hover */
+}
+
+/* Subheading styles */
+.class-list-content h3 {
+    font-size: 1.25rem; /* Font size for subheadings */
+    font-weight: 600; /* Font weight for subheadings */
+}
+
+/* Paragraph styles */
+.class-list-content p {
+    color: #4a5568; /* Dark gray for paragraph text */
+    margin: 0; /* Remove margin for paragraphs */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.class-list-content p:hover {
+    color: #2563eb; /* Change color on hover */
+}
+
+/****************************************************************/
+/* EquipmentList.css */
+.equipment-list-container {
+    display: flex; /* Use Flexbox for layout */
+    max-width: 1280px; /* Adjust width as needed */
+    margin: 0 auto; /* Center horizontally */
+    height: 500px; /* Set a specific height for the container */
+    border-radius: 0.75rem; /* Rounded corners */
+    overflow: hidden; /* Ensures content doesn't overflow rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+.equipment-list-container:hover {
+    transform: scale(1.02); /* Slightly enlarge the container on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+.equipment-list {
+    flex: 1; /* Takes up half of the container */
+    padding: 1.5rem; /* Adjust padding as needed */
+    background-color: #e9f5e9; /* Light green background */
+    border-radius: 0.75rem; /* Rounded corners */
+    border: 1px solid #c8e6c9; /* Light green border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.equipment-list:hover {
+    background-color: #d4f0d4; /* Slightly lighter green on hover */
+}
+
+.equipment-list h2 {
+    font-size: 1.5rem; /* Font size for headings */
+    font-weight: 600; /* Bold font weight */
+    margin-bottom: 1.5rem; /* Space below the heading */
+    color: #1f2937; /* Dark gray color */
+}
+
+.equipment-list ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.equipment-list li {
+    border-bottom: 1px solid #d1d5db; /* Light gray border for list items */
+    padding: 1rem 0; /* Padding for list items */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.equipment-list li:hover {
+    background-color: #f0f4f0; /* Light gray background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-left: 4px solid #2563eb; /* Blue accent border on the left */
+}
+
+.equipment-list h3 {
+    font-size: 1.25rem; /* Font size for subheadings */
+    font-weight: 600; /* Bold font weight */
+    color: #1f2937; /* Dark gray color */
+}
+
+.equipment-list p {
+    color: #6b7280; /* Gray color for paragraphs */
+    margin: 0; /* Remove margin for paragraphs */
+}
+
+/* Styling for the image side */
+.equipment-list-image {
+    flex: 1; /* Takes up the other half of the container */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfYIRDdroYdHrmdcAg4Z6r6Bz9FU8p464QPw&s'); /* Background image */
+    background-size: cover; /* Ensure the image covers the container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    position: relative; /* Ensure relative positioning for image */
+    overflow: hidden; /* Ensure no overflow of content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.equipment-list-image:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+/**********************************************************/
+/* Title.css */
+.container {
+    padding: 2rem; /* Padding inside the container */
+    max-width: 1280px; /* Maximum width of the container */
+    margin: 0 auto; /* Center horizontally */
+    background-color: #f9f9f9; /* Very light gray background */
+    border-radius: 0.75rem; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.container:hover {
+    background-color: #f0f4f4; /* Slightly lighter background color on hover */
+}
+
+.container h1 {
+    font-size: 2rem; /* Font size for the title */
+    font-weight: 700; /* Bold font weight */
+    color: #1f2937; /* Dark gray color */
+    text-align: center; /* Center text alignment */
+    margin: 2rem 0; /* Margin on top and bottom */
+    background: linear-gradient(90deg, rgba(29, 78, 216, 1) 0%, rgba(39, 99, 239, 1) 100%); /* Gradient background */
+    -webkit-background-clip: text; /* Gradient text effect */
+    -webkit-text-fill-color: transparent; /* Gradient text effect */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.container h1:hover {
+    color: #2563eb; /* Change color on hover */
+}
+
+.container h1::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 4px;
+    background: #2563eb; /* Blue underline */
+    margin: 1rem auto; /* Margin on top and bottom */
+    border-radius: 2px; /* Rounded edges for the underline */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.container h1:hover::after {
+    background-color: #1d4ed8; /* Darker blue underline on hover */
+}
+/***********************************************************/
+/* App.css */
+.app-container {
+    border: 2px solid #1f2937; /* Dark gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1rem; /* Space inside the border */
+    max-width: 1200px; /* Set a maximum width */
+    margin: 0 auto; /* Center the container horizontally */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+}
+/**************************************************************/
+/* Footer.css */
+.footer {
+    background-color: #1f2937; /* Dark gray background */
+    color: #ffffff; /* White text color */
+    padding: 1rem; /* Space inside the footer */
+    border-top: 2px solid #374151; /* Slightly lighter border at the top */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for separation */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center align footer content horizontally */
+    align-items: center; /* Center align footer content vertically */
+}
+
+.footer:hover {
+    background-color: #2d3748; /* Slightly lighter gray on hover */
+}
+
+.footer-links {
+    @apply text-center; /* Center align the links container */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center align links horizontally */
+}
+
+.footer-links-list {
+    @apply list-none; /* Remove default list styling */
+    display: flex; /* Align list items horizontally */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    cursor: pointer;
+}
+
+.footer-links-list li {
+    margin: 0 1rem; /* Space between links */
+    font-size: 1rem; /* Adjust font size */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transform and color transition */
+}
+
+.footer-links-list li:hover {
+    transform: translateY(-3px); /* Move the link up slightly on hover */
+    color: #f59e0b; /* Change color on hover */
+}
+/***************************************************************/
+/* LoginComponent.css */
+.login-page {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+}
+
+.login-box {
+    flex: 1 1 33%; /* Takes up 1/3 of the page */
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    border-radius: 0.75rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; /* Ensure content stays within rounded corners */
+}
+
+.login-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, rgba(255, 87, 34, 1) 0%, rgba(255, 193, 7, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.error-message {
+    color: #e53e3e;
+    margin-bottom: 1rem;
+}
+
+.login-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #374151;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+    outline: none;
+}
+
+.login-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #f97316; /* Vibrant orange */
+    color: #ffffff;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-button:hover {
+    background-color: #ea580c; /* Darker orange */
+    transform: scale(1.03);
+}
+
+.links {
+    margin-top: 1rem;
+}
+
+.link {
+    display: block;
+    color: #2563eb;
+    text-decoration: none;
+    margin: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #1d4ed8; /* Darker blue on hover */
+}
+
+.image-slider {
+    flex: 2 1 67%; /* Takes up 2/3 of the page */
+    position: relative;
+    overflow: hidden; /* Hide overflowing content */
+    background-color: #e46b07; /* Grey background for the remaining area */
+}
+
+.slider-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for the collage effect */
+    grid-template-rows: repeat(3, 1fr); /* 3 rows for the collage effect */
+    gap: 0; /* No gap between images */
+    width: 100%;
+    height: 100%;
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers container without distortion */
+    background-size: cover; /* Ensure image covers the entire area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    position: relative; /* Ensure positioning relative to container */
+    opacity: 0; /* Start with images hidden */
+    transition: opacity 1s ease-in-out;
+}
+
+.slider-image.active {
+    opacity: 1; /* Show active image */
+}
+
+button {
+    font-size: 1rem; /* Font size for buttons */
+    font-weight: 600; /* Semi-bold font weight for emphasis */
+    padding: 0.75rem 1.5rem; /* Adequate padding for better clickability */
+    border: none; /* Remove default border */
+    border-radius: 0.5rem; /* Rounded corners for a modern look */
+    background-color: #2563eb; /* Blue background color */
+    color: #ffffff; /* White text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    text-transform: uppercase; /* Uppercase text for prominence */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    font-family: 'Poppins', sans-serif; /* Apply stylish font from Google Fonts */
+    letter-spacing: 0.5px; /* Slight letter spacing for better readability */
+    border: 2px solid transparent; /* Border with transparent color to avoid layout shifts */
+}
+
+/*********************************************************/
+/*Login Page header*/
+.site-header {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 1rem 2rem; /* Space inside the header */
+    text-align: center; /* Center-align the header contents */
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Center-align items horizontally */
+    align-items: center; /* Center-align items vertically */
+    flex-direction: column; /* Stack logo and name vertically */
+    height: 100vh; /* Full viewport height to center vertically */
+    box-sizing: border-box; /* Include padding in total height */
+  }
+  
+  .logo-container {
+    display: flex; /* Flexbox to align items in a row */
+    flex-direction: column; /* Stack logo and name vertically */
+    align-items: center; /* Center-align items horizontally */
+  }
+  
+  .site-logo {
+    height: 60px; /* Adjust logo size as needed */
+    margin-bottom: 0.5rem; /* Space between logo and site name */
+  }
+  
+  .site-name-container {
+    display: flex; /* Flexbox for stacking site names vertically */
+    flex-direction: column; /* Stack site names vertically */
+    align-items: center; /* Center-align text horizontally */
+  }
+  
+  .site-name {
+    margin: 0; /* Remove default margin */
+    font-size: 2rem; /* Adjust font size as needed */
+  }
+  /**********************************************************/
+  /* ProgramCard.css */
+.program-card {
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 0.75rem; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow */
+    padding: 1.5rem; /* Padding inside the card */
+    margin: 1rem; /* Margin around the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.program-card:hover {
+    transform: scale(1.02); /* Slightly enlarge the card on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.program-title {
+    font-size: 1.25rem; /* Font size for the title */
+    font-weight: 600; /* Bold font weight */
+    margin-bottom: 0.5rem; /* Space below the title */
+    color: #003d6c; /* Dark blue text color */
+}
+
+.program-description {
+    font-size: 1rem; /* Font size for the description */
+    color: #555; /* Dark gray text color */
+    margin-bottom: 1rem; /* Space below the description */
+}
+
+.program-details {
+    font-size: 0.875rem; /* Font size for details */
+    color: #333; /* Dark text color */
+}
+
+.program-charges,
+.program-period {
+    margin-bottom: 0.5rem; /* Space below each detail */
+}
